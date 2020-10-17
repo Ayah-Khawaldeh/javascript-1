@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form>
+            <select id="selectList" name="mySelect" onchange = "imgChange (this);">
+                <option value= " NoImg.jpeg" >select</option> 
+              <option value="Norway.png" >Norway</option>
+              <option value="./Italy.jpeg">Italy</option>
+            </select>
+    
+        </form>
+            
+      <img src="NoImg" name="image-swap" /> 
+<script>
+
+function imgChange(select){
+  var image = document.getElementsByName("image-swap")[0];
+  image.src = select.options[select.selectedIndex].value;
+}  
+
+
+    </body>
+</html>

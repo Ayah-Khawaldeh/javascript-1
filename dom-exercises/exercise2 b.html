@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Exercise #2: Changing colors</title>
+    <title>Exercise #2b: Changing colors</title>
     <style>
         #mydiv {
             width: 200px;
@@ -18,18 +18,21 @@
 <body>
 <div id="mydiv"></div>
 <script>
-        
         changeColor = document.getElementById('mydiv'),
-        colors = ['blue' , 'red' , 'green'];
-        colorIndex = 0;
+            colors = ['red' , 'green', 'blue' , 'orange' ,'yellow' ];
+         colorIndex = 0;
 
+         
         function M() 
+
+        
         {
-            document.getElementById('mydiv').style.backgroundColor = colors[colorIndex];
+            document.getElementById('mydiv').style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
             colorIndex = (colorIndex + 1) % colors.length;
         };
 
            changeColor.addEventListener('click',M) 
+      
 
 </script>
 
